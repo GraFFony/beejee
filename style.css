@@ -1,0 +1,33 @@
+.custom-form{
+    float: right !important;
+}
+#form_second{
+    float: right;
+    display: none;
+}
+#form_create{
+    display: none;
+    position: absolute;
+    left:calc(50% - 200px);
+    top: calc(50% - 250px);
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+}
+#crtbutton{
+    float: right;
+    margin-right: 100px;
+}
+#main_task{
+    margin-top: 20px !important;
+}
+.bg-border{
+    margin: 20px;
+    box-shadow: 0 5px 15px -3px rgba(0,0,0,.3);
+    border-radius: 20px !important;
+}
+.card_need_info{
+    overflow: auto !important;
+    max-height: 200px !important;
+
+}

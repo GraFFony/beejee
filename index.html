@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Тестовое задание</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</head>
+<body onload="load_script()">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-custom container row">
+        <div class="col-sm-5">
+        <a class="navbar-brand" onclick="crt_out()" href="#">Задачи</a>
+            <button type="button"onclick="crt()" class="btn btn-outline-primary">Создать задачу</button>
+    </div>
+    <div class="col-sm-8">
+            <form class="form-inline my-2 my-lg-0 custom-form" id="form_first">
+                <input id="login" class="form-control mr-sm-2" type="text" placeholder="Login" aria-label="Search">
+                <input id="password" class="form-control mr-sm-2" type="password" placeholder="Password"
+                       aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" onclick="log_in()" type="button">Войти</button>
+            </form>
+            <div id="form_second"><button class="btn btn-outline-primary my-2 my-sm-0" onclick="log_out()" type="button">Выйти</button></div>
+        </div>
+    </div>
+</nav>
+<div class="container row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-11">
+        <div id="main_task" class="container">
+            <div class="card-body bg-secondary bg-border">
+                <h5 class="card-title">Юзернейм</h5>
+                <h6 class="card-subtitle mb-2 ">Почта</h6>
+                <p class="card-text" style="overflow: auto; max-height: 200px">Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#" onclick="page_prev()">Previous</a></li>
+                <li class="page-item"><a id="pages" class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#" onclick="page_next()">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div id="form_create" class="bg-dark">
+    <form>
+        <div style="padding: 20px" class="form-group">
+            <label for="username" class="text-light">Имя пользователя</label>
+            <input type="email" class="form-control" id="username" placeholder="Имя пользователя">
+        </div>
+        <div style="padding: 20px" class="form-group">
+            <label for="mail" class="text-light">Электронная почта</label>
+            <input type="email" class="form-control" id="mail" placeholder="name@example.com">
+        </div>
+        <div style="padding: 20px" class="form-group">
+            <label for="text" class="text-light">Описание задачи</label>
+            <textarea class="form-control" id="text" rows="3"></textarea>
+        </div>
+        <button id="crtbutton" class="btn btn-outline-primary my-2 my-sm-0" onclick="create_task()" type="button">Отправить</button>
+    </form>
+</div>
+</body>
+</html>
