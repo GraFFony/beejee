@@ -128,10 +128,8 @@ async function create_task() {
     let res = await fetch('PHP/TasksController.php', {
         method: "POST",
         body: data,
-    }).then(a => a.json());
-    if (await res) {
-        load_script();
-    }
+    }).then(alert('Добавлено'); load_script();});
+
 }
 
 function page_next() {
@@ -158,10 +156,8 @@ async  function changeTask(id) {
  let res = await fetch('PHP/TasksController.php', {
      method: "POST",
      body: data,
- }).then(a => a.json());
-    if (await res) {
-        load_script();
-    }
+ }).then(alert('Изменено'); load_script();});
+    
 }
 function orders(orderS) {
     if (order === orderS){
